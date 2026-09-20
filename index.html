@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>This Is My Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Heart */
+.heart {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background: #ff1744;
+    animation: heartbeat 1.2s infinite;
+    box-shadow:
+        0 0 20px #ff1744,
+        0 0 50px #ff1744,
+        0 0 100px #ff1744;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #ff1744;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -75px;
+    left: 0;
+}
+
+.heart::after {
+    left: 75px;
+    top: 0;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(-45deg) scale(1.12);
+    }
+}
+
+/* Floating words */
+.words {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.word {
+    position: absolute;
+    color: #ff5b82;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff1744;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(.7);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(1);
+    }
+}
+
+/* Text */
+.message {
+    position: absolute;
+    bottom: 13%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.small {
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+.name {
+    margin-top: 15px;
+    font-family: cursive;
+    font-size: 40px;
+    color: #ff4774;
+    text-shadow: 0 0 15px #ff1744;
+}
+
+.heart-icon {
+    color: #ff1744;
+    font-size: 35px;
+    margin-left: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heart"></div>
+
+    <div class="words">
+        <span class="word" style="left:20%;top:25%;animation-delay:0s">
+            I love you
+        </span>
+
+        <span class="word" style="left:60%;top:20%;animation-delay:1s">
+            forever
+        </span>
+
+        <span class="word" style="left:35%;top:35%;animation-delay:2s">
+            sweetheart
+        </span>
+
+        <span class="word" style="left:70%;top:38%;animation-delay:3s">
+            love you
+        </span>
+
+        <span class="word" style="left:25%;top:50%;animation-delay:1.5s">
+            always ❤️
+        </span>
+
+        <span class="word" style="left:55%;top:55%;animation-delay:.5s">
+            I love you
+        </span>
+
+        <span class="word" style="left:40%;top:15%;animation-delay:2.5s">
+            my love
+        </span>
+
+        <span class="word" style="left:75%;top:60%;animation-delay:3.5s">
+            forever ❤️
+        </span>
+    </div>
+
+    <div class="message">
+        <div class="small">THIS IS MY LOVE</div>
+
+        <div class="name">
+            for Lishu
+            <span class="heart-icon">❤️</span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
